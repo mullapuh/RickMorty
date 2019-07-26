@@ -14,6 +14,15 @@
 		82A8DF4822EA9B6B00A64919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82A8DF4722EA9B6B00A64919 /* Assets.xcassets */; };
 		82A8DF4B22EA9B6B00A64919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82A8DF4922EA9B6B00A64919 /* LaunchScreen.storyboard */; };
 		82A8DF5622EA9B6B00A64919 /* RickyAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DF5522EA9B6B00A64919 /* RickyAndMortyTests.swift */; };
+		82A8DF6122EA9DEF00A64919 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DF6022EA9DEF00A64919 /* Constants.swift */; };
+		82A8DF6922EAA54B00A64919 /* NetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DF6722EAA54B00A64919 /* NetworkServiceProvider.swift */; };
+		82A8DF6A22EAA54B00A64919 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DF6822EAA54B00A64919 /* NetworkService.swift */; };
+		82A8DF6D22EAA5B900A64919 /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DF6C22EAA5B900A64919 /* CharacterService.swift */; };
+		82A8DF6F22EAA5C700A64919 /* EpisodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DF6E22EAA5C700A64919 /* EpisodeService.swift */; };
+		82A8DF7122EAA5D200A64919 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DF7022EAA5D200A64919 /* LocationService.swift */; };
+		82A8DF7422EB35B800A64919 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DF7322EB35B800A64919 /* Characters.swift */; };
+		82A8DF7622EB382B00A64919 /* Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DF7522EB382B00A64919 /* Episodes.swift */; };
+		82A8DF7822EB388000A64919 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DF7722EB388000A64919 /* Locations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +47,15 @@
 		82A8DF5122EA9B6B00A64919 /* RickyAndMortyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickyAndMortyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A8DF5522EA9B6B00A64919 /* RickyAndMortyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyAndMortyTests.swift; sourceTree = "<group>"; };
 		82A8DF5722EA9B6B00A64919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82A8DF6022EA9DEF00A64919 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		82A8DF6722EAA54B00A64919 /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
+		82A8DF6822EAA54B00A64919 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		82A8DF6C22EAA5B900A64919 /* CharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterService.swift; sourceTree = "<group>"; };
+		82A8DF6E22EAA5C700A64919 /* EpisodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeService.swift; sourceTree = "<group>"; };
+		82A8DF7022EAA5D200A64919 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		82A8DF7322EB35B800A64919 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		82A8DF7522EB382B00A64919 /* Episodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episodes.swift; sourceTree = "<group>"; };
+		82A8DF7722EB388000A64919 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +99,9 @@
 			children = (
 				82A8DF3D22EA9B6700A64919 /* AppDelegate.swift */,
 				82A8DF3F22EA9B6700A64919 /* ViewController.swift */,
+				82A8DF6022EA9DEF00A64919 /* Constants.swift */,
+				82A8DF7222EB359600A64919 /* Model */,
+				82A8DF6622EAA54B00A64919 /* Services */,
 				82A8DF4122EA9B6700A64919 /* Main.storyboard */,
 				82A8DF4722EA9B6B00A64919 /* Assets.xcassets */,
 				82A8DF4922EA9B6B00A64919 /* LaunchScreen.storyboard */,
@@ -97,6 +118,36 @@
 				82A8DF5722EA9B6B00A64919 /* Info.plist */,
 			);
 			path = RickyAndMortyTests;
+			sourceTree = "<group>";
+		};
+		82A8DF6622EAA54B00A64919 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				82A8DF6B22EAA55600A64919 /* Base */,
+				82A8DF6C22EAA5B900A64919 /* CharacterService.swift */,
+				82A8DF6E22EAA5C700A64919 /* EpisodeService.swift */,
+				82A8DF7022EAA5D200A64919 /* LocationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		82A8DF6B22EAA55600A64919 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				82A8DF6722EAA54B00A64919 /* NetworkServiceProvider.swift */,
+				82A8DF6822EAA54B00A64919 /* NetworkService.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		82A8DF7222EB359600A64919 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82A8DF7322EB35B800A64919 /* Characters.swift */,
+				82A8DF7522EB382B00A64919 /* Episodes.swift */,
+				82A8DF7722EB388000A64919 /* Locations.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +252,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				82A8DF4022EA9B6700A64919 /* ViewController.swift in Sources */,
+				82A8DF6F22EAA5C700A64919 /* EpisodeService.swift in Sources */,
+				82A8DF6A22EAA54B00A64919 /* NetworkService.swift in Sources */,
+				82A8DF6D22EAA5B900A64919 /* CharacterService.swift in Sources */,
 				82A8DF3E22EA9B6700A64919 /* AppDelegate.swift in Sources */,
 				82A8DF4622EA9B6700A64919 /* RickyAndMorty.xcdatamodeld in Sources */,
+				82A8DF7822EB388000A64919 /* Locations.swift in Sources */,
+				82A8DF6122EA9DEF00A64919 /* Constants.swift in Sources */,
+				82A8DF7422EB35B800A64919 /* Characters.swift in Sources */,
+				82A8DF7122EAA5D200A64919 /* LocationService.swift in Sources */,
+				82A8DF7622EB382B00A64919 /* Episodes.swift in Sources */,
+				82A8DF6922EAA54B00A64919 /* NetworkServiceProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
