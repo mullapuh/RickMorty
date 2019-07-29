@@ -84,6 +84,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		823EF7DD22EF1AB600EE46E3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82A8DF3F22EA9B6700A64919 /* EpisodeListViewController.swift */,
+				82A8DF7D22EE933C00A64919 /* EpisodeDetailsViewController.swift */,
+				823EF7DB22EECB7F00EE46E3 /* CharacterInformationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		823EF7DE22EF1ABF00EE46E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82A8DF7B22EE850D00A64919 /* EpisodesListTableViewCell.swift */,
+				82A8DF7F22EE9BA800A64919 /* EpisodeDetailCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		82A8DF3122EA9B6700A64919 = {
 			isa = PBXGroup;
 			children = (
@@ -106,12 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				82A8DF3D22EA9B6700A64919 /* AppDelegate.swift */,
-				82A8DF3F22EA9B6700A64919 /* EpisodeListViewController.swift */,
-				82A8DF7B22EE850D00A64919 /* EpisodesListTableViewCell.swift */,
-				82A8DF7D22EE933C00A64919 /* EpisodeDetailsViewController.swift */,
-				82A8DF7F22EE9BA800A64919 /* EpisodeDetailCollectionViewCell.swift */,
-				823EF7DB22EECB7F00EE46E3 /* CharacterInformationViewController.swift */,
-				82A8DF7922EE7A6600A64919 /* NetworkManager.swift */,
+				823EF7DD22EF1AB600EE46E3 /* Controller */,
+				823EF7DE22EF1ABF00EE46E3 /* View */,
 				82A8DF7222EB359600A64919 /* Model */,
 				82A8DF6622EAA54B00A64919 /* Services */,
 				82A8DF4122EA9B6700A64919 /* Main.storyboard */,
@@ -155,6 +170,7 @@
 		82A8DF7222EB359600A64919 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				82A8DF7922EE7A6600A64919 /* NetworkManager.swift */,
 				82A8DF7322EB35B800A64919 /* Character.swift */,
 				82A8DF7522EB382B00A64919 /* Episodes.swift */,
 				82A8DF7722EB388000A64919 /* Locations.swift */,
