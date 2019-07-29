@@ -13,32 +13,34 @@ enum EpisodeService {
     case episodeFor(name: String)
     case episode(identifier: Int)
     case episodes(identifiers: [Int])
+    case episodesPage(page: Int)
 }
 
 extension EpisodeService: Service {
     var baseURL: String {
-        return "https://rickandmortyapi.com/api/episode"
+        return "https://rickandmortyapi.com"
     }
     
     var path: String {
         switch self {
         case .episode(let identifier):
-            return "/\(identifier)"
+            return "/api/episode/\(identifier)"
         case .allEpisodes:
-            return ""
+            return "/api/episode"
         case .episodeFor(_):
-            return ""
+            return "/api/episode"
         case .episodes(let identifiers):
             guard identifiers.count > 0 else { return "" }
             
             guard identifiers.count > 1 else {
-                return "/\(identifiers[0])"
+                return "/api/episode/\(identifiers[0])"
             }
             
             let stringInts = identifiers.map { "\($0)" }
             let joinedString = stringInts.joined(separator: ",")
-            return "\(joinedString)"
-            
+            return "/api/episode/\(joinedString)"
+        case .episodesPage(_):
+            return "/api/episode/"
         }
     }
     
@@ -55,6 +57,8 @@ extension EpisodeService: Service {
             break
         case .episodes(_):
             break
+        case .episodesPage(let page):
+            params["page"] = "\(page)"
         }
         return params
     }

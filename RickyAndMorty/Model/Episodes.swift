@@ -31,7 +31,7 @@ struct Episode: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id, name
-        case airDate
+        case airDate = "air_date"
         case episode, characters, url, created
     }
 }

@@ -40,7 +40,9 @@ extension Service {
             guard let parameters = parameters as? [String: String] else {
                 fatalError("parameters for GET http method must conform to [String: String]")
             }
-            urlComponents?.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+            if parameters.count > 0 {
+                urlComponents?.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+            }
         }
         
         return urlComponents?.url
