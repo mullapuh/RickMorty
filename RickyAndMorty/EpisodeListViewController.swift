@@ -12,6 +12,7 @@ class EpisodeListViewController: UIViewController {
 
     @IBOutlet weak var episodesList: UITableView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     var selected: Episode?
     
@@ -27,10 +28,14 @@ class EpisodeListViewController: UIViewController {
         self.view.addGestureRecognizer(leftSwipe)
         
         showEpisodesList()
+        self.episodesList.tableFooterView = UIView(frame: .zero)
     }
 
     func showEpisodesList() {
-        NetworkManager.sharedInstance.loadEpisodes { (success) in
+        indicator.startAnimating()
+        NetworkManager.sharedInstance.loadEpisodes { [weak self] (success) in
+            guard let `self` = self else { return }
+            self.indicator.stopAnimating()
             self.episodesList.reloadData()
             guard let episodes = NetworkManager.sharedInstance.episodes else {
                 self.pageControl.numberOfPages = 0
@@ -41,7 +46,8 @@ class EpisodeListViewController: UIViewController {
     }
     
     func showEpisodesList(page: Int) {
-        NetworkManager.sharedInstance.loadEpisodes(with: page) { (success) in
+        NetworkManager.sharedInstance.loadEpisodes(with: page) { [weak self]  (success) in
+            guard let `self` = self else { return }
             self.episodesList.reloadData()
         }
     }

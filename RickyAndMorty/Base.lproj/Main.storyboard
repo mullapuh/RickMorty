@@ -105,12 +105,22 @@
                                 </subviews>
                                 <gestureRecognizers/>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Wvh-La-JLv">
+                                <rect key="frame" x="169" y="347" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="DcW-Pf-E9n"/>
+                                    <constraint firstAttribute="height" constant="37" id="wXg-aB-bNn"/>
+                                </constraints>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="q2N-xE-Fcx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="7DX-ss-hnX"/>
+                            <constraint firstItem="Wvh-La-JLv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hyn-KT-JC3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q2N-xE-Fcx" secondAttribute="trailing" constant="8" id="IYi-vs-19f"/>
+                            <constraint firstItem="Wvh-La-JLv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ONg-Ut-Ejd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q2N-xE-Fcx" secondAttribute="bottom" constant="8" id="S7D-sY-g85"/>
                             <constraint firstItem="q2N-xE-Fcx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="boM-Yh-Lbe"/>
                         </constraints>
@@ -121,6 +131,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="episodesList" destination="IL2-AU-HwB" id="8MQ-fc-yLI"/>
+                        <outlet property="indicator" destination="Wvh-La-JLv" id="EIh-9P-0s0"/>
                         <outlet property="pageControl" destination="WoB-zh-jeN" id="bCh-HP-aPU"/>
                         <segue destination="2Lv-dB-ei3" kind="show" identifier="episodeDetail" id="p3u-8x-3Tb"/>
                     </connections>
