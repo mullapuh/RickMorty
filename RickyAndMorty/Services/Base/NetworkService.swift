@@ -21,10 +21,8 @@ protocol Service {
 }
 
 extension Service {
-    public var urlRequest: URLRequest {
-        guard let url = self.url else {
-            fatalError("URL could not be built")
-        }
+    public var urlRequest: URLRequest? {
+        guard let url = self.url else { return nil }
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         
@@ -35,15 +33,15 @@ extension Service {
         var urlComponents = URLComponents(string: baseURL)
         urlComponents?.path = path
         
-        if method == .get {
-            // add query items to url
-            guard let parameters = parameters as? [String: String] else {
-                fatalError("parameters for GET http method must conform to [String: String]")
-            }
-            if parameters.count > 0 {
-                urlComponents?.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+        switch method {
+        case .get:
+            if let params = parameters as? [String: String] {
+                if params.count > 0 {
+                    urlComponents?.queryItems = params.map { URLQueryItem(name: $0.key, value: $0.value) }
+                }
             }
         }
+       
         
         return urlComponents?.url
     }

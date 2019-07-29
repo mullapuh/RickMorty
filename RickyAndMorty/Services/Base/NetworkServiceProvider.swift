@@ -20,11 +20,19 @@ class ServiceProvider<T: Service> {
     init() { }
     
     func load(service: T, completion: @escaping (Result<Data>) -> Void) {
-        call(service.urlRequest, completion: completion)
+        guard let request = service.urlRequest else {
+            completion(Result.empty)
+            return
+        }
+        call(request, completion: completion)
     }
     
     func load<U>(service: T, decodeType: U.Type, completion: @escaping (Result<U>) -> Void) where U: Decodable {
-        call(service.urlRequest) { result in
+        guard let request = service.urlRequest else {
+            completion(Result.empty)
+            return
+        }
+        call(request) { result in
             switch result {
             case .success(let data):
                 let decoder = JSONDecoder()
